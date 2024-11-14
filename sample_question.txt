@@ -1,0 +1,14 @@
+I am new to the bank please help me to understand Private Branch Exchange (PBX) system
+
+what role does it play in an organisation?
+
+What are some common risks associated with PBX systems if they are not properly secured?
+
+What is 'dial-through fraud,' and how does it typically exploit PBX systems?
+
+What are the different types of PBX systems mentioned in the article, and how do they differ?
+What are the essential security controls recommended for securing PBX systems?
+Why is it important to change default passwords in PBX systems, and what additional security measure should be implemented?
+How can organisations limit the potential for fraud and misuse through their PBX system?
+What role do monitoring and logging tools play in the security of a PBX system?
+How should cloud/hosted PBX systems be secured, and what specific measures should be taken to ensure data protection?

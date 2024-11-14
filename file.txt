@@ -1,0 +1,211 @@
+11/8/24, 10:17 PM Private Branch Exchange (PBX) best practice - NCSC.GOV.UK
+https://www.ncsc.gov.uk/guidance/private-branch-exchange-best-practice 1/8
+Private Branch Exchange (PBX) best practice
+Protecting your organisation’s telephony systems from cyber attacks and telecoms
+fraud. 
+Note:
+All PBX systems should follow the NICC’s Requirements on Communications Providers in
+relation to Customer Line Identification display services and other related services
+(.pdf).
+A Private Branch Exchange (PBX) is a telecommunications system used to
+manage and route incoming and outgoing telephone calls within an
+organisation. Implementing the steps outlined in this guidance will reduce the
+likelihood of attackers compromising your PBX system, whether to commit fraud,
+instigate denial of service (DoS) attacks, or exploit telecoms channels.
+This guidance is aimed at administrators and/or procurers of PBX systems, so
+some knowledge of telecommunications is assumed.
+Introduction
+As with any system that’s connected to the internet, PBX systems, if not
+configured correctly, are at risk of being compromised by attackers. Attackers
+can find vulnerabilities by using scanners or by exploiting system weaknesses
+such as unchanged default passwords, open SIP ports, or incorrectly managed
+(or non-existent) firewalls.
+Once inside, criminals can route high-rate international or premium-rate
+numbers through the system. These attacks (also known as ‘dial-through fraud’)
+are generally prolonged and involve expensive telephone numbers being dialled
+hundreds or even thousands of times.
+11/8/24, 10:17 PM Private Branch Exchange (PBX) best practice - NCSC.GOV.UK
+https://www.ncsc.gov.uk/guidance/private-branch-exchange-best-practice 2/8
+As the PBX owner, you are responsible for the security and administration of your
+phone system. Your service provider may have systems in place to help detect
+and notify you of hacking attempts and fraud, but as the business owner you will
+be expected to pay the bill.
+What is a PBX?
+A Private Branch Exchange (PBX) is a telecommunications system used to
+manage and route incoming and outgoing telephone calls within an
+organisation. In essence, a PBX serves as a private internal telephone network
+that allows employees to communicate both internally and externally.
+Historically, PBX systems were hardware-based systems that required physical
+switches and cables to connect calls within an organisation. However, with
+advancements in technology, PBX systems have evolved into digital and
+software-based solutions that offer a wide range of features beyond basic call
+routing. As an essential component of modern business, it is important to protect
+and secure the PBX from potential security threats and vulnerabilities.
+Types of PBX
+There are several types of PBX system, each with its own characteristics and
+applications.
+Traditional PBX
+Hardware-based systems that were commonly used before the rise of digital and IPbased technologies. They manage incoming and outgoing calls within an
+organisation using physical hardware components like switches and cables. A
+significant cost of installing these switches was the wiring needed to physically
+connect each user to the PBX equipment.
+IP PBX
+Also known as VoIP PBX, IP PBX is a digital PBX system that uses internet protocol (IP) to
+transmit voice and data. These systems use the organisation's existing data network
+to transmit voice calls as packets of data, allowing for more efficient and costeffective communication. IP PBX systems often offer advanced features like
+voicemail-to-email, video conferencing, and integration with other digital
+11/8/24, 10:17 PM Private Branch Exchange (PBX) best practice - NCSC.GOV.UK
+https://www.ncsc.gov.uk/guidance/private-branch-exchange-best-practice 3/8
+communication tools. These systems can use wifi networks to reduce installation and
+maintenance costs.
+Hosted/cloud PBX
+In a hosted or cloud PBX system, the PBX hardware and software are hosted by a
+third-party service provider off site. Organisations connect to the cloud PBX over the
+internet, eliminating the need for on-premises equipment. This approach is
+particularly attractive to small and medium-sized enterprises (SMEs) that want
+advanced PBX features without the infrastructure and maintenance costs.
+Virtual PBX
+Virtual PBX is a software-based PBX solution that runs on virtualised servers. It is a
+subset of IP PBX systems and is often used by businesses that prefer not to invest in
+physical hardware. Virtual PBX can be deployed on-premises or in the cloud and
+offers features similar to traditional PBX systems.
+Hybrid PBX
+These systems combine elements of both traditional and IP PBX systems. They are
+suitable for organisations that want to migrate to IP-based communication gradually,
+while still using existing analogue or digital lines.
+General mitigations for PBX systems
+The NCSC recommend you implement the following security controls for all PBX
+systems.
+Secure access controls and user authentication
+Ensure users understand the importance of strong passwords, and provide
+them with assistance if necessary.
+Continuously monitor and audit user accounts to identify and disable any
+unused or unauthorised accounts.
+Many PBX systems feature an administrative interface accessible through a
+specific combination of numbers and characters dialled during a call. As
+with administrator passwords, it’s essential that you change any default
+values that may be in place. You should also implement multi-factor
+authentication (MFA) for administrative access.
+11/8/24, 10:17 PM Private Branch Exchange (PBX) best practice - NCSC.GOV.UK
+https://www.ncsc.gov.uk/guidance/private-branch-exchange-best-practice 4/8
+Limit calls
+Limit dialling patterns. Restrict the types of numbers and destinations that
+employees can dial to prevent fraud and unauthorised use. For example you
+may choose to disable international calling if your company does not make
+calls outside the UK.
+Disable the ability to call premium rate numbers or personal numbers; these
+usually have a high call cost. You may also choose to restrict out-of-hours
+calls (i.e. evenings, weekends, or holidays).
+Restrict the ability to call forward or call transfer, especially to an off-premise
+number. PBXs can be configured to allow calls to be forwarded to a different
+number. The most common misuse of this is to route calls to premium rate
+or international numbers, but this service can also be abused so that the
+final called party sees the Customer Line Identifier (CLI) of the PBX rather
+than the scammer who is making the call.
+Contracts
+Scrutiny of contractual terms is essential to safeguard against potential
+pitfalls, such as hidden charges or exorbitant fees. Thoroughly examine the
+contract before signing to ensure transparency and protect yourself from
+unintended financial consequences.
+Ensure your contracts are clear on responsibilities and that these are
+covered in the contract. For example, if you have a managed service and a
+configuration is exploited, who is responsible for the fraud?
+Monitoring and logging
+Use network monitoring tools to track call volumes, call patterns, and system
+performance. This helps in identifying unusual activity or potential security
+breaches.
+Store log files securely to help with forensic analysis in case of a security
+incident.
+Password management
+11/8/24, 10:17 PM Private Branch Exchange (PBX) best practice - NCSC.GOV.UK
+https://www.ncsc.gov.uk/guidance/private-branch-exchange-best-practice 5/8
+Change default passwords for all on-premises PBX components and
+devices. Ensure passwords are strong, if necessary by adopting NCSC
+password strategies.
+Firewall and intrusion detection/prevention
+Use firewalls to control network traffic and prevent unauthorised access to
+the PBX system.
+PBXs should have inbound/outbound traffic completely locked down to
+trusted IPs (that is, those of SIP trunk providers, clients and other trusted IPs).
+Where applicable use permit= and deny= lines in the SIP configuration file to
+limit IP address access, and prevent easy SIP scanning by setting
+alwaysauthreject=yes.
+Implement an intrusion detection/prevention system (IDS/IPS) to detect and
+respond to suspicious network activities and potential security threats.
+Regular updates and patches
+Keep the PBX system up to date with the latest security patches and updates
+to protect against known vulnerabilities. This includes the software and
+firmware running on the PBX itself and for VoIP phone components. Set up
+automatic updates where possible.
+Encryption
+Implement encryption for both data in transit and data at rest within the onpremises PBX system. Use secure transport protocols (TLS) for
+communication between PBX components.
+Regular backups
+Regularly schedule backups of the PBX configuration and data to ensure
+data integrity and facilitate disaster recovery in case of hardware failure or
+cyber attacks.
+Regular security audits and penetration testing
+11/8/24, 10:17 PM Private Branch Exchange (PBX) best practice - NCSC.GOV.UK
+https://www.ncsc.gov.uk/guidance/private-branch-exchange-best-practice 6/8
+Regularly conduct security audits and assess the PBX system's security
+posture to identify vulnerabilities and weaknesses.
+Perform penetration tests to simulate potential cyber attacks and address
+any identified vulnerabilities.
+Disaster recovery planning
+Create a comprehensive plan outlining the steps to restore the PBX system
+in case of hardware failures, natural disasters, or cyber attacks.
+Test and practice your response to a variety of cyber attacks using the
+NCSC’s 'Exercise in a Box' tool.
+Employee education and awareness
+Provide regular security training to employees to educate them about potential
+security threats and best practices to follow. Ensure that all relevant employees
+know how to recognise and respond to signs of PBX fraud such as:
+repeated calls of short duration
+high numbers of incoming hung up calls
+unexpected increases of incoming calls where the caller hangs up when
+answered
+the sudden increase of freephone usage or high-cost destinations
+long duration calls
+changes in after-hours calling patterns
+In addition, companies should establish a dedicated and easily accessible
+reporting channel to ensure all employees have a clear and confidential way to
+voice their concerns.
+Specific mitigations for cloud/hosted PBX systems
+11/8/24, 10:17 PM Private Branch Exchange (PBX) best practice - NCSC.GOV.UK
+https://www.ncsc.gov.uk/guidance/private-branch-exchange-best-practice 7/8
+As with all cloud services, you should choose and assess your provider in line with
+our cloud security guidance. In addition, we recommend that you specifically
+consider the following security controls for cloud/hosted PBX systems:
+Verify that the provider offers automatic updates to keep your system
+protected against known vulnerabilities.
+Confirm that your cloud/hosted PBX provider employs encryption for data in
+transit and data at rest within their system, and implement encryption
+protocols like TLS for signalling and SRTP for media streams. This ensures that
+voice communications are secure and protected against eavesdropping
+and man-in-the-middle attacks.
+Specific mitigations for on-premise PBX systems
+The NCSC recommend you implement the following security controls for onpremise PBX systems.
+Isolate the PBX by placing it on a separate VLAN or subnet to separate it from
+other network components. This prevents unauthorised access from other
+parts of the network.
+It is cheaper and quicker for a supplier to install a PBX ‘straight out of the box’,
+with no bespoke configuration. These can leave the bill payer with a service
+that can be exploited at their expense. Where possible, stipulate in the
+contract that the provider will bear responsibility for any losses resulting
+from the exploitation of a misconfiguration in the PBX.
+Store backups in a secure, off-site location to prevent data loss due to onpremises disasters. Backups are an essential part of an organisation’s
+response and recovery process. See the NCSC guidance on principles for
+ransomware-resistant cloud backups
+PUBLISHED
+20 February 2024
+REVIEWED
+11/8/24, 10:17 PM Private Branch Exchange (PBX) best practice - NCSC.GOV.UK
+https://www.ncsc.gov.uk/guidance/private-branch-exchange-best-practice 8/8
+20 February 2024
+VERSION
+1.0
+WRITTEN FOR
+Small & medium sized organisations
+Large organisations
+Cyber security professionals
+Public sector

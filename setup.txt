@@ -1,0 +1,6 @@
+ENDPOINT_URL=https://genai-openai-beyondhuman.openai.azure.com
+DEPLOYMENT_NAME=gpt-4o  
+SEARCH_ENDPOINT=https://ai-search-demo-beyondhumant.search.windows.net
+SEARCH_KEY=sk
+SEARCH_INDEX_NAME=beyond-human-index1
+AZURE_OPENAI_API_KEY=ak

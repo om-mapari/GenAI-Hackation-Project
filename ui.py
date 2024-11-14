@@ -8,7 +8,7 @@ def responseFromKB(prompt,input_text):
     return kBResponse
 
 # Title and Sidebar
-st.set_page_config(page_title="Confluece GPT", page_icon="")
+st.set_page_config(page_title="Confluence GPT", page_icon="")
 st.title("Team Beyond Human")
 st.sidebar.title("Options")
 
